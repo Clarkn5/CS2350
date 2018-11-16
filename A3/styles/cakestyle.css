@@ -1,0 +1,46 @@
+h1{
+	color: red;
+}
+body{
+	background-color: blue;
+}
+h2{
+	color: black; 
+}
+ol{
+	color: black;
+}
+li{
+	color: black; 
+}
+table, td{
+	border:1px solid #000;
+	background-color: blue; 
+	align= center;
+	}
+th{
+	color: red;
+
+}
+a:link{
+	color: red;
+}
+a:visited{
+	color: green; 
+}
+a:hover{
+	color: hotpink;
+}
+#conversiontable{
+	margin-left:auto;
+	margin-right:auto;
+}
+#tableofcontents{
+	border-style:dotted;
+	text-align:center;
+
+}
+#orangecake{
+	position: absolute;
+	right: 0px;
+}
