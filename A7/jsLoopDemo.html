@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!--
+Honor Code: I acknowledge that this code represents my own work: 
+Initials: ACN
+Date: 11/1/18
+-->
+    <meta charset="UTF-8" />
+    <meta name="author" content="Allen Clark Nelson Jr" />
+    <meta name="description" content="Looping practice" />
+    <meta name="keywords" content="Javascript, HTML, CSS, CS2350" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <title>Looping Practice</title>
+
+    <script>
+        function go() {
+            var num = window.prompt("Input a Number between 1 and 10: ");
+            num = Number(num);
+            if ((num % 1) === 0 && num > 0) {
+                var data = "<table>"
+                for (i = 0; i < num; i++) {
+                    data += ("<tr><td>ROW " + (i + 1) + "</td></tr>");
+                }
+                document.getElementById("go").innerHTML = data;
+            } else {
+                window.alert("Incorrect input. Please try again.");
+                run();
+            }
+        }
+
+    </script>
+
+    <style>
+        td {
+            border: 1px solid black;
+        }
+
+    </style>
+
+</head>
+
+<body onload="go()">
+    <p id="go"> 
+    </p>
+    <a href="jsLoopDemo.html">Loop Demo</a>
+    <a href="cashRegister.html">Cash Register Demo</a>
+</body>
+
+</html>

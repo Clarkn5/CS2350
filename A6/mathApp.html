@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!--
+Honor Code: I acknowledge that this code represents my own work: 
+Initials: ACN   
+Date: 10/23/18
+-->
+<meta charset="UTF-8" />
+<meta name="author" content="Allen Clark Nelson Jr" />
+<meta name="description" content="Intro to JS Math Game" />
+<meta name="keywords" content="Math, CS2350, JS, CSS, Html" />
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<title>Math Game</title>
+
+
+
+
+<script>
+var result; //Result of each function
+var questionNumber = 0;//How many questions the player has gone through
+function namePrompt(){ //Intial prompt that asks the player their name.
+    var name = prompt("What is your name?")
+    console.log("Hello "+ name + "! I'm happy to have you play my game.")
+}
+function generateAddition(){    //Addition function
+    questionNumber++
+    var number1 = Math.floor(Math.random() * 11) //Generates a random number between 0-10
+    var number2 = Math.floor(Math.random() * 11)
+    var playerAnswer = prompt("What is " + number1 + "+" + number2 + "?") //Asks the player the addition question
+    var result = number1 + number2
+    if (playerAnswer == result){ //Checks if the answer is correct or not. 
+        console.log("You are Correct!!! Question #" + questionNumber) 
+    }
+    else{
+        console.log("Try Again!! Question #" + questionNumber)
+    }
+
+    
+}
+    
+    function generateSubtraction(){ //Subtraction function
+    questionNumber++
+    var number1 = Math.floor(Math.random() * 11) 
+    var number2 = Math.floor(Math.random() * 11)
+    var playerAnswer = prompt("What is " + number1 + "-" + number2 + "?")
+    var result = number1 - number2
+    if (playerAnswer == result){
+        console.log("You are Correct!!! Question #" + questionNumber)
+    }
+    else{
+        console.log("Try Again!! Question #" + questionNumber)
+    }
+
+}
+    function generateMultiplication(){ //Multiplication function
+    questionNumber++
+    var number1 = Math.floor(Math.random() * 11) 
+    var number2 = Math.floor(Math.random() * 11)
+    var playerAnswer = prompt("What is " + number1 + "*" + number2 + "?")
+    var result = number1 * number2
+    if (playerAnswer == result){
+        console.log("You are Correct!!! Question #" + questionNumber)
+    }
+    else{
+        console.log("Try Again!! Question #" + questionNumber)
+    }
+
+    
+}
+    function generateDivision(){ //Division function
+    questionNumber++
+    var number1 = Math.floor(Math.random() * 10)+1 //With division function we want each number to not equal 0 so this will random numbers from 1-10
+    var number2 = Math.floor(Math.random() * 10)+1
+    var playerAnswer = prompt("What is " + number1 + "/" + number2 + "?")
+    var result = Math.floor(number1 / number2) //This makes sure that the answer of the division is a whole number
+    
+    if (playerAnswer == result){
+        console.log("You are Correct!!! Question #" + questionNumber)
+    }
+    else{
+        console.log("Try Again!! Question #" + questionNumber)
+    }
+        
+
+}
+    
+</script>
+</head>
+
+<body onload="namePrompt()"> <!-- As soon as the web page loads it calls the namePrompt function-->
+
+<input type="button" value="+" onclick="generateAddition()">
+<input type="button" value="-" onclick="generateSubtraction()">
+<input type="button" value="*" onclick="generateMultiplication()">
+<input type="button" value="/" onclick="generateDivision()">
+    
+<div class="container">
+
+</div><!-- container -->
+
+<script src="js/jquery.slim.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+</body>
+</html>

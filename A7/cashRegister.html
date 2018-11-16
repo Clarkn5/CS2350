@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!--
+Honor Code: I acknowledge that this code represents my own work: 
+Initials: ACN
+Date: 11/2/18
+-->
+    <meta charset="UTF-8" />
+    <meta name="author" content="Allen Clark Nelson jr" />
+    <meta name="description" content="Register" />
+    <meta name="keywords" content="CS2350, HTML, Javascript, CSS" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <title>Register</title>
+    <script>
+        var cartForParty = {
+            banana: "1.25",
+            handkerchief: ".99",
+            Tshirt: "25.01",
+            apple: "0.60",
+            nalgene: "10.34",
+            proteinShake: "22.36"
+        }
+
+        function cashRegister(cartForPartycartForParty) {
+            var items = Object.keys(cartForParty);   
+            var total = 0;
+
+            for (var i = 0; i < items.length; i++) {
+var itemName = items[i]; 
+                var itemPrice = cartForParty[itemName];
+                total += Number.parseFloat(itemPrice); 
+                var tax = parseFloat(total * .06);
+                var taxFixed = tax.toFixed(2);
+            }
+
+            window.alert("Cart total is : $" + total+ " plus $" + taxFixed + " tax.");	
+        }
+
+    </script>
+
+</head>
+
+<body>
+    <input type="button" value="Click here to total the cart" OnClick="cashRegister(cartForParty)" />
+    <div class="container">
+    <a href="jsLoopDemo.html">Loop Demo</a>
+    <a href="jsTimeDemo.html">Time Demo</a>
+    </div>
+</body>
+
+</html>
